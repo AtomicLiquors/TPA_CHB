@@ -1,7 +1,8 @@
 function solution(s, skip, index) {
     
     const shouldSkipLetter = [];
-    
+
+    // 특정 문자열에 대해 n번째 문자의 아스키 코드 구하기 : .charCodeAt(n)
     for(const skipLetter of skip){
         shouldSkipLetter[skipLetter.charCodeAt(0)] = true;
     }
@@ -19,7 +20,7 @@ function solution(s, skip, index) {
             }    
         }
         
-        
+        // 아스키 코드로를 문자열로 변환 : String의 내장 메서드 fromCharCode(n)
         str += String.fromCharCode(target);
     }
     
